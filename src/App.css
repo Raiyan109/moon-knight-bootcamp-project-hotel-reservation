@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.chatBotBody {
+  position: absolute;
+  bottom: -250px;
+  left: 90px;
+}
+
+.chatbotWrapper {
+  position: absolute;
+  bottom: -350px;
+  left: 10px;
+}
+
+.chatbot {
+  color: green;
+  font-size: 50px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +49,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

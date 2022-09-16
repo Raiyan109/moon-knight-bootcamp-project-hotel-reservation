@@ -6,10 +6,14 @@ import Home from './components/Home/Home/Home';
 import SignUp from './components/Auth/SignUp/SignUp';
 import Rooms from './components/Home/Rooms/Rooms';
 import SingleRoom from './components/Home/SingleRoom/SingleRoom';
-// import ChatBot from 'react-simple-chatbot';
-
+import ChatBot from 'react-simple-chatbot';
+import { Avatar } from '@mui/material';
+import ChatIcon from '@mui/icons-material/Chat';
+import { useState } from 'react';
 
 function App() {
+
+  const [openChat, setOpenChat] = useState(false)
   return (
     <div className="App">
       <Header />
@@ -19,10 +23,19 @@ function App() {
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/login' element={<Home />}></Route>
         <Route path='/rooms/' element={<Rooms />}></Route>
-        <Route path='/rooms/:slug' element={<SingleRoom />}></Route>
+        <Route path='/rooms/:id' element={<SingleRoom />}></Route>
         <Route path='*' element={<SingleRoom />}></Route>
       </Routes>
-      {/* <ChatBot
+
+      <Avatar
+        onClick={() => setOpenChat(!openChat)}
+        className='chatbotWrapper'>
+        <ChatIcon
+          fontSize="large"
+          bgSize="large"
+          className='chatbot' />
+      </Avatar>
+      {openChat && <ChatBot className='chatBotBody'
         steps={[
           {
             id: '1',
@@ -48,7 +61,9 @@ function App() {
             end: true,
           },
         ]}
-      /> */}
+      />}
+
+
     </div>
   );
 }
