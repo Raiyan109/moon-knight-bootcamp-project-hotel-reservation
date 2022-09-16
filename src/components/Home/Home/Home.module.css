@@ -1,0 +1,53 @@
+.home {
+    width: 100%;
+    height: 400px;
+    background-color: #003580;
+}
+
+.homeWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.upperBanner {
+    flex: 8;
+    padding: 20px;
+}
+
+.animatedBannerText {
+    color: white;
+    font-size: 60px;
+}
+
+.bottomBanner {
+    flex: 4;
+}
+
+
+
+.bottomBannerInputWrapper {
+    -webkit-box-shadow: 3px 5px 15px -9px rgba(0, 0, 0, 0.67);
+    box-shadow: 3px 5px 15px -9px rgba(0, 0, 0, 0.67);
+    position: absolute;
+    bottom: -300px;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-left: 200px;
+    border-radius: 30px;
+}
+
+.bottomBannerInputIcon {
+    color: gray;
+    margin-right: 10px;
+}
+
+.bottomBannerInput {
+    border: none;
+    width: 70%;
+}
+
+.bottomBannerInput:focus {
+    outline: none;
+}
