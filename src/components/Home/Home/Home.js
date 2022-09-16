@@ -17,13 +17,18 @@ const Home = () => {
                 </div>
 
                 <div className={styles.bottomBanner}>
-                    <div className={styles.bottomBannerInputWrapper}>
+                    <div className={styles.bottomBannerWrapper}>
                         <span className={styles.bottomBannerInputIcon}>
                             <KingBedIcon />
                         </span>
                         <input type="text" className={styles.bottomBannerInput}
                             placeholder='Where are you going?'
                         />
+                        <br />
+                        <form>
+                            <label for="birthday">Check-in</label>
+                            <input type="date" id="birthday" name="birthday" />
+                        </form>
                     </div>
                 </div>
             </div>
